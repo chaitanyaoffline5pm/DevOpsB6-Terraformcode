@@ -1,14 +1,14 @@
 resource "aws_vpc" "AwsB6" {
-  cidr_block           = "10.100.0.0/16"
+  cidr_block           = var.vpc_cidr
   enable_dns_hostnames = true
   tags = {
-    Name = "DevOpsB6-vpc"
-    Env  = "Dev"
+    Name = var.vpc_name
+    Env  = var.env
   }
 }
-resource "aws_internet_gateway" "AwsB6-IGw"{
-    vpc_id=aws_vpc.AwsB6.vpc_id
-    tags = {
-        Name = "DevOpsB6-IGW"
-    }
+resource "aws_internet_gateway" "AwsB6-IGw" {
+  vpc_id = aws_vpc.AwsB6.id
+  tags = {
+    Name = var.vpc_igw
+  }
 }
