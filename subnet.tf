@@ -16,3 +16,12 @@ resource "aws_subnet" "Public-Subnet-2" {
     Name = var.subnet_name_2
   }
 }
+resource "aws_subnet" "Public-Subnet-4" {
+  cidr_block              = var.subnet_cidr_4
+  vpc_id                  = aws_vpc.AwsB6.id
+  availability_zone       = "us-east-1a"
+  map_public_ip_on_launch = true
+  tags = {
+    Name = var.subnet_name_4
+  }
+}
