@@ -10,5 +10,8 @@ variable "subnet_cidr_3" {}
 variable "subnet_name_3" {}
 variable "subnet_cidr_4" {}
 variable "subnet_name_4" {}
+variable "subnet_vpc1_cidr" {}
+variable "subnet_vpc1_name" {}
+
 
 

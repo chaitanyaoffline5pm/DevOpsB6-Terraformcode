@@ -1,7 +1,9 @@
-resource "aws_s3_bucket" "Statelock" {
-  bucket = "statelockcgit"
-
-  tags = {
-    Name = "devOpsb6cgitstatelockbucket"
-  }
-}
+#resource "aws_s3_bucket" "Awsb6_bucket" {
+#  bucket = "awsb6cgitedu"
+#
+#  tags = {
+#    Name        = "awsb6cgitedu"
+#    Environment = "Dev"
+#  }
+#}
+#
